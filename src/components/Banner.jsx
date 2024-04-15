@@ -27,7 +27,7 @@ const Banner = () => {
                     modules={[Autoplay, Pagination]}
                     loop={true}
                     autoplay={
-                        { delay: 2000 }
+                        { delay: 2001 }
                     }>
                     <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/7nQG98w/photo-1561501900-3701fa6a0864.jpg" alt="" /></SwiperSlide>
                     <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/gzmQcQ5/photo-1584132967334-10e028bd69f7.jpg" alt="" /></SwiperSlide>
