@@ -1,0 +1,75 @@
+[
+    {
+      "estate_title": "Sunset Paradise Villa",
+      "id": "001",
+      "segment_name": "Luxury",
+      "description": "Experience unparalleled luxury at Sunset Paradise Villa, a sprawling estate nestled on the cliffs overlooking the azure waters of the Mediterranean Sea. This exquisite retreat offers breathtaking sunset views, opulent living spaces, and an array of amenities for the discerning traveler.",
+      "price": "$10,000/night",
+      "status": "rent",
+      "area": "5000 sq ft",
+      "location": "Santorini, Greece",
+      "facilities": ["Infinity Pool", "Private Beach Access", "Spa", "Gourmet Kitchen"],
+      "image": ["https://i.ibb.co/7nQG98w/photo-1561501900-3701fa6a0864.jpg"]
+    },
+    {
+      "estate_title": "Mountain Haven Chalet",
+      "id": "002",
+      "segment_name": "Secluded Retreat",
+      "description": "Escape to the serenity of Mountain Haven Chalet, a secluded retreat nestled amidst the majestic peaks of the Rocky Mountains. This charming chalet offers cozy accommodations, panoramic views, and direct access to hiking trails and ski slopes.",
+      "price": "$800/night",
+      "status": "rent",
+      "area": "3000 sq ft",
+      "location": "Aspen, Colorado",
+      "facilities": ["Fireplace", "Hot Tub", "Outdoor Grill", "Home Theater"],
+      "image": ["https://i.ibb.co/gzmQcQ5/photo-1584132967334-10e028bd69f7.jpg"]
+    },
+    {
+      "estate_title": "Tropical Oasis Resort",
+      "id": "003",
+      "segment_name": "Beachfront Luxury",
+      "description": "Discover paradise at Tropical Oasis Resort, a lavish beachfront retreat nestled amidst lush tropical gardens on the shores of Hawaii. Immerse yourself in island living with luxurious accommodations, world-class dining, and a myriad of water activities.",
+      "price": "$15,000/night",
+      "status": "rent",
+      "area": "6000 sq ft",
+      "location": "Maui, Hawaii",
+      "facilities": ["Private Pool", "Beach Cabanas", "Tennis Court", "Gourmet Kitchen"],
+      "image": ["https://i.ibb.co/gzmQcQ5/photo-1584132967334-10e028bd69f7.jpg"]
+    },
+    {
+      "estate_title": "Desert Dream Lodge",
+      "id": "004",
+      "segment_name": "Desert Escape",
+      "description": "Experience the allure of the desert at Desert Dream Lodge, an enchanting oasis nestled amidst the dunes of the Sahara. Retreat to luxurious accommodations, enjoy traditional Bedouin hospitality, and embark on unforgettable desert adventures.",
+      "price": "$5,000/night",
+      "status": "rent",
+      "area": "4000 sq ft",
+      "location": "Sahara Desert, Morocco",
+      "facilities": ["Private Tent", "Camel Rides", "Traditional Dining", "Star Gazing"],
+      "image": ["https://i.ibb.co/gzmQcQ5/photo-1584132967334-10e028bd69f7.jpg"]
+    },
+    {
+      "estate_title": "Coastal Serenity Retreat",
+      "id": "005",
+      "segment_name": "Oceanfront Escape",
+      "description": "Relax and unwind at Coastal Serenity Retreat, a serene oceanfront haven nestled along the rugged coastline of Big Sur, California. Immerse yourself in nature, rejuvenate in luxury accommodations, and savor the tranquility of the Pacific Ocean.",
+      "price": "$1,200/night",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "Big Sur, California",
+      "facilities": ["Hot Tub", "Ocean View Deck", "Gourmet Kitchen", "Outdoor Shower"],
+      "image": ["https://i.ibb.co/YBBxMCW/premium-photo-1669050695617-03cfe6ec763f.jpg"]
+    },
+    {
+      "estate_title": "Alpine Vista Lodge",
+      "id": "006",
+      "segment_name": "Mountain Retreat",
+      "description": "Experience the ultimate mountain getaway at Alpine Vista Lodge, a luxurious retreat nestled amidst the alpine splendor of the Swiss Alps. Enjoy panoramic mountain views, world-class skiing, and upscale amenities in a serene alpine setting.",
+      "price": "$12,000/night",
+      "status": "rent",
+      "area": "5500 sq ft",
+      "location": "Verbier, Switzerland",
+      "facilities": ["Ski-in/Ski-out Access", "Sauna", "Wine Cellar", "Gourmet Kitchen"],
+      "image": ["https://i.ibb.co/YRJVpnG/photo-1617859047452-8510bcf207fd.jpg"]
+    }
+  ]
+  
