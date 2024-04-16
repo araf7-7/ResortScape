@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ReactDOM from 'react-dom/client'
 
 import {
@@ -13,6 +13,10 @@ import Home from './components/Home';
 import ResortDetails from './components/ResortDetails';
 import Gallary from './components/Gallary';
 import ErrorPage from './components/ErrorPage';
+import Login from './components/Login';
+import Register from './components/Register';
+// import AuthProviders from './providers/AuthProviders';
+import FirebaseProvider from './components/FirebaseProvider/FirebaseProvider';
 
 
 const router = createBrowserRouter([
@@ -31,6 +35,14 @@ const router = createBrowserRouter([
           element: <Gallary></Gallary>,
         },
         {
+          path: "/login",
+          element: <Login></Login>,
+        },
+        {
+          path: "/register",
+          element: <Register></Register>,
+        },
+        {
           path: "/resort/:id",
           element: <ResortDetails></ResortDetails>,
           loader: () => fetch("../resort.json")
@@ -41,7 +53,10 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <FirebaseProvider>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </FirebaseProvider>
+
+
+
 )

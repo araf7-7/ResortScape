@@ -13,7 +13,10 @@ const Header = () => {
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
                                 <NavLink to="/" className="hover:text-violet-600 hover:border-2 hover:border-violet-600 p-2 rounded-lg">Home</NavLink>
-                                <Link to="/gallary" className=" hover:text-white hover:bg-violet-600 hover:border-2 hover:border-violet-600 p-2 rounded-lg">Gallery</Link>
+                                <Link to="/gallary"  className="hover:text-violet-600 hover:border-2 hover:border-violet-600 p-2 rounded-lg">Gallery</Link>
+                                <NavLink to="/login" className="hover:text-violet-600 hover:border-2 hover:border-violet-600 p-2 rounded-lg">Login</NavLink>
+                          
+                            <NavLink to="/register" className="hover:text-violet-600 hover:border-2 hover:border-violet-600 p-2 rounded-lg">Register</NavLink>
 
                             </ul>
                         </div>
@@ -33,8 +36,9 @@ const Header = () => {
                     </div>
                     <div className="navbar-end gap-3">
                         <div className="items-center flex-shrink-0 hidden lg:flex">
-                            <button className="self-center px-8 py-3 rounded">Sign in</button>
-                            <button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Sign up</button>
+                            <NavLink to="/login"><button className="self-center px-8 py-3 rounded">Login</button></NavLink>
+                          
+                            <NavLink to="/register"><button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Register</button></NavLink>
                         </div>
                     </div>
                 </div>
