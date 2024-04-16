@@ -22,17 +22,17 @@ const ResortDetails = () => {
             </Helmet>
             <div>
 
-                <div className="hero min-h-screen">
+                <div className="hero min-h-screen mb-12">
 
                     <div className="mx-auto justify-center items-center">
                         <img
                             src={resort.image}
                             className="mt-12 rounded-lg w-[350px] lg:w-[700px] mx-auto  h-full bg-base-200 " />
-                        <div className="card mx-5 lg:mx-[120px] gap-4 mt-8">
+                        <div className="card mx-5 lg:mx-[150px] gap-4 mt-8">
 
                             <h2 className="card-title font-bold text-2xl">{resort.estate_title}</h2>
                             <p className="text-[#131313CC] text-xl font-medium">{resort.segment_name}</p>
-                            <h3 className="text-sm font medium">{resort.description}</h3>
+                            <h3 className="text-lg font-medium">{resort.description}</h3>
                             <h2 className="card-title font-medium text-lg"> <FaLocationDot /> {resort.location} </h2>
                             <h2 className="card-title font-medium text-lg"><LuBadgeDollarSign /> {resort.price}</h2>
                             <h2 className="card-title font-medium text-lg"><GrStatusUnknown /> {resort.status}</h2>

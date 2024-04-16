@@ -16,8 +16,8 @@ const ResortCard = ({ resort }) => {
     }, [])
     return (
         <div>
-            <div data-aos="fade-up" className="card card-compact h-full w-auto lg:w-96 bg-base-100  border-2 rounded-lg p-5">
-                <figure className="bg-[#F3F3F3] py-10"><img className=" rounded-xl" src={image} alt={segment_name} /></figure>
+            <div data-aos="fade-up" className="card card-compact h-full w-[400px] mx-auto  lg:w-96 lg:h-full bg-base-100  border-2 rounded-lg p-0 lg:p-5">
+                <figure className=" p-3 "><img className=" rounded-xl" src={image} alt={segment_name} /></figure>
 
                 <div className="card-body" data-aos="fade-up" >
 
@@ -40,7 +40,6 @@ const ResortCard = ({ resort }) => {
                     <Link to={`/resort/${id}`}><button className="btn mt-3 w-[130px ] text-white bg-violet-500  hover:bg-violet-600 hover:text-white hover:border-violet-600">Explore More</button></Link>
 
                 </div>
-                <hr className="border-dashed" />
 
             </div>
         </div>

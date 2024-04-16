@@ -11,16 +11,16 @@ const Banner = () => {
         Aos.init({ duration: 3000 })
     }, [])
     return (
-        <div className="grid grid-cols-2 lg:mx-2 mt-4 mx-3 md:mt-24">
-            <div className=" md:w-[554px] col-span-2 lg:col-span-1 items-center content-center">
+        <div className="grid grid-cols-2 mx-2  lg:mx-2 mt-4  md:mx-2 md:mt-10">
+            <div className=" md:w-auto col-span-2 lg:col-span-1 items-center content-center">
                 <div className="lg:pl-4">
                     <p className="font-bold">Your Gateway to Luxury Retreats</p>
-                    <p className='md:text-7xl text-3xl mt-2 font-light font-serif' data-aos="fade-left">Find The Best Resorts For Your Holiday</p>
-                    <p className='md:text-xl text-base text-gray-500 md:mt-5' data-aos="fade-right">Welcome to ResortScape, your premier destination for indulging in the worlds most luxurious retreats. Dive into a realm where relaxation meets extravagance, where every detail is crafted to cater to your desire for ultimate comfort and rejuvenation.</p>
-                    <button className="btn mt-3 w-[130px] btn-outline text-violet-600 hover:bg-violet-600 hover:text-white hover:border-violet-600">Explore More</button>
+                    <p className='md:text-4xl lg:text-3xl w-auto text-4xl mt-2 font-light font-serif' data-aos="fade-left">Find The Best Resorts For Your Holiday</p>
+                    <p className='md:text-xl w-[400px] text-base text-gray-500 md:mt-5' data-aos="fade-right">Welcome to ResortScape, your premier destination for indulging in the worlds most luxurious retreats. Dive into a realm where relaxation meets extravagance, where every detail is crafted to cater to your desire for ultimate comfort and rejuvenation.</p>
+                    <button className="mb-3 btn mt-3 w-[130px] btn-outline text-violet-600 hover:bg-violet-600 hover:text-white hover:border-violet-600">Explore More</button>
                 </div>
             </div>
-            <div className="lg:col-span-1 col-span-2 bg-white">
+            <div className="lg:col-span-1 lg:w-auto w-[400px] col-span-2 bg-white">
                 <Swiper
                     pagination={
                         { clickable: true }}
