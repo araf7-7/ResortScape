@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
+import UseAuth from "../hooks/UseAuth";
 
 const Header = () => {
+    const {logout, user } = UseAuth
+
     return (
         <div>
 
@@ -39,11 +42,40 @@ const Header = () => {
                             <NavLink to="/login"><button className="self-center px-8 py-3 rounded">Login</button></NavLink>
                           
                             <NavLink to="/register"><button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Register</button></NavLink>
+                            <div className="navbar-end">
+                    {
+                        user?.email ? <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src={user.photoURL} alt={user.displayName} />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                    <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
+
+                                </li>
+                                <li>
+                                    <button className="btn btn-sm  btn-ghost"
+                                        onClick={logout}
+                                    >Logout</button>
+
+                                </li>
+                            </ul>
+                        </div>
+                            :
+                            <Link to='/login'>
+                                <button className="btn btn-sm  btn-ghost">Login</button>
+                            </Link>
+                    }
+                </div>
+            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            
+        
     );
 };
 
