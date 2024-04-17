@@ -15,9 +15,15 @@ import Gallary from './components/Gallary';
 import ErrorPage from './components/ErrorPage';
 import Login from './components/Login';
 import Register from './components/Register';
-// import AuthProviders from './providers/AuthProviders';
+
 import FirebaseProvider from './components/FirebaseProvider/FirebaseProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import UserProfile from './components/UserProfile';
+
+// import { Toaster } from 'sonner';
+import React from 'react';
+import { Toaster } from 'sonner';
+import Profile from './components/Profile';
 
 
 const router = createBrowserRouter([
@@ -37,6 +43,20 @@ const router = createBrowserRouter([
             <Gallary></Gallary>
           </PrivateRoute>,
         },
+        {
+          path: "/userprofile",
+          element: <PrivateRoute>
+            <UserProfile></UserProfile>
+          </PrivateRoute>,
+        },
+        
+        {
+          path: "/profile",
+          element: <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>,
+        },
+        
         {
           path: "/login",
           element: <Login></Login>,
@@ -58,9 +78,13 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
   <FirebaseProvider>
+
+    <Toaster position='top-center'></Toaster>
     <RouterProvider router={router} />
   </FirebaseProvider>
+  </React.StrictMode>
 
 
 

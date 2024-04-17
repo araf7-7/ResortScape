@@ -9,12 +9,12 @@ const Customer = () => {
 
     return (
         <div>
-            <section className="lg:mx-auto mx-0 my-16">
+            <section className="  lg:mx-auto mx-0 my-16">
                 <div className="mx-1 lg:mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12">
                     <h1 className="text-4xl font-semibold leading-none text-center" data-aos="fade-up" >What our customers are saying about us</h1>
                 </div>
-                <div className="w-[400px] lg:w-auto  mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2">
-                    <div className="flex flex-col items-center  lg:mx-0" data-aos="fade-up">
+                <div className="w-[400px] md:w-auto lg:w-auto  mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2">
+                    <div className="flex flex-col items-center lg:mx-0" data-aos="fade-up">
                         <div className="relative text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute top-0 left-0 w-8 h-8 dark:text-gray-300">
                                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
@@ -29,7 +29,7 @@ const Customer = () => {
                         <span className="w-12 h-1 my-2 rounded-lg dark:bg-violet-600"></span>
                         <p>Eren Yeager</p>
                     </div>
-                    <div className="flex flex-col items-center max-w-lg mx-12 lg:mx-0" data-aos="fade-up">
+                    <div className="flex flex-col items-center max-w-lg mx-auto lg:mx-0" data-aos="fade-up">
                         <div className="relative text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="absolute top-0 left-0 w-8 h-8 dark:text-gray-300">
                                 <path fill="currentColor" d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>

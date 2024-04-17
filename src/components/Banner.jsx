@@ -20,7 +20,7 @@ const Banner = () => {
                     <button className="mb-3 btn mt-3 w-[130px] btn-outline text-violet-600 hover:bg-violet-600 hover:text-white hover:border-violet-600">Explore More</button>
                 </div>
             </div>
-            <div className="lg:col-span-1 lg:w-auto w-[400px] col-span-2 bg-white">
+            <div className="lg:col-span-1 lg:w-auto md:w-full w-[400px] col-span-2 bg-white">
                 <Swiper
                     pagination={
                         { clickable: true }}

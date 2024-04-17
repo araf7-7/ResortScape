@@ -61,6 +61,7 @@ const FirebaseProvider = ({ children }) => {
         gitHubLogin,
         logout,
         user,
+        setUser,
         loading,
         refetch,
         setRefetch,

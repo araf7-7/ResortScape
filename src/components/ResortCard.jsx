@@ -16,7 +16,7 @@ const ResortCard = ({ resort }) => {
     }, [])
     return (
         <div>
-            <div data-aos="fade-up" className="card card-compact h-full w-[400px] mx-auto  lg:w-96 lg:h-full bg-base-100  border-2 rounded-lg p-0 lg:p-5">
+            <div data-aos="fade-up" className="card card-compact h-full w-[400px] mx-auto  md:w-auto lg:w-96 lg:h-full bg-base-100  border-2 rounded-lg p-0 lg:p-5">
                 <figure className=" p-3 "><img className=" rounded-xl" src={image} alt={segment_name} /></figure>
 
                 <div className="card-body" data-aos="fade-up" >
