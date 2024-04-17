@@ -31,8 +31,8 @@ const Banner = () => {
                     }>
                     <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/7nQG98w/photo-1561501900-3701fa6a0864.jpg" alt="" /></SwiperSlide>
                     <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/gzmQcQ5/photo-1584132967334-10e028bd69f7.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/gzmQcQ5/photo-1584132967334-10e028bd69f7.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/gzmQcQ5/photo-1584132967334-10e028bd69f7.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/jHSgY14/170508145320-best-desert-hotels-little-kulala-night-scene.webp" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/HhQ5dxV/photo-1610641818989-c2051b5e2cfd.jpg" alt="" /></SwiperSlide>
                     <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/YBBxMCW/premium-photo-1669050695617-03cfe6ec763f.jpg" alt="" /></SwiperSlide>
                     <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/YRJVpnG/photo-1617859047452-8510bcf207fd.jpg" alt="" /></SwiperSlide>
                     <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/jHD9pXX/premium-photo-1681922761648-d5e2c3972982.jpg" alt="" /></SwiperSlide>
