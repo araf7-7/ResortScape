@@ -1,18 +1,24 @@
 
 import { useForm } from 'react-hook-form';
 import UseAuth from "../hooks/UseAuth";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const { createUser } = UseAuth;
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location?.state || "/"
     const {
         register, handleSubmit, formState: { errors },
     } = useForm()
     const onSubmit = data => {
         const { email, password } = data
         createUser(email, password)
-            .then(result => {
-                console.log(result)
-            })
+        .then(result => {
+            if (result.user) {
+                navigate(from)
+            }
+        })
     }
 
     return (

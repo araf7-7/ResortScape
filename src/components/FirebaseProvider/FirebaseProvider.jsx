@@ -7,33 +7,42 @@ const googleProvider = new GoogleAuthProvider()
 const gitHubProvider = new GithubAuthProvider()
 const FirebaseProvider = ({ children }) => {
     const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
+    console.log(loading)
 
 
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
 
     }
     const signInUser = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const googleLogin =()=>{
+        setLoading(true)
         return signInWithPopup(auth, googleProvider )
     }
     const gitHubLogin =()=>{
+        setLoading(true)
         return signInWithPopup(auth, gitHubProvider )
     }
     const logout =( ) => {
+        setUser(null)
         signOut(auth)
     }
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+      const unsuscribe =  onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
+                setLoading(false)
             }
 
         });
+        return ()=> unsuscribe()
     }, [])
 
     const allValues = {
@@ -42,7 +51,8 @@ const FirebaseProvider = ({ children }) => {
         googleLogin,
         gitHubLogin,
         logout,
-        user
+        user,
+        loading
     }
     return (
 

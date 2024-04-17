@@ -17,6 +17,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 // import AuthProviders from './providers/AuthProviders';
 import FirebaseProvider from './components/FirebaseProvider/FirebaseProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -44,7 +45,9 @@ const router = createBrowserRouter([
         },
         {
           path: "/resort/:id",
-          element: <ResortDetails></ResortDetails>,
+          element: <PrivateRoute>
+            <ResortDetails></ResortDetails>
+          </PrivateRoute>,
           loader: () => fetch("../resort.json")
         },
       ]
