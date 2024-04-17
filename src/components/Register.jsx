@@ -1,24 +1,54 @@
 
 import { useForm } from 'react-hook-form';
 import UseAuth from "../hooks/UseAuth";
+import { updateProfile } from "firebase/auth"
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Register = () => {
-    const { createUser } = UseAuth;
+
+    const { createUser, refetch, setRefetch, user, updateUserProfile } = UseAuth();
     const navigate = useNavigate()
+    useEffect(() => {
+        if (user?.photoURL) navigate("/")
+    }, [navigate, user]
+    )
     const location = useLocation()
     const from = location?.state || "/"
     const {
         register, handleSubmit, formState: { errors },
     } = useForm()
     const onSubmit = data => {
-        const { email, password } = data
+        const { email, password, FullName, image } = data
+        console.log(FullName, image)
         createUser(email, password)
-        .then(result => {
-            if (result.user) {
-                navigate(from)
-            }
-        })
+
+            .then(() => {
+                updateUserProfile(FullName, image)
+                    .then(() => {
+                       
+                            updateProfile( {
+                                displayName: FullName, photoURL: image
+
+                            }).then(() => {
+                                setRefetch(!refetch)
+                                navigate(from)
+                            })
+                        
+                    })
+
+                //     if (result.user) {
+                //         updateProfile(result.user, {
+                //             displayName: FullName, photoURL: image
+
+                //         }).then(() => {
+                //             setRefetch(!refetch)
+                //             navigate(from)
+                //         })
+
+                //     }
+                // })
+            })
     }
 
     return (
@@ -38,12 +68,12 @@ const Register = () => {
 
                 <div className="space-y-1 text-sm">
                     <label htmlFor="img" className="block dark:text-gray-600">Image URL</label>
-                    <input {...register("image")} type="text" name="img" id="img" placeholder="Image Url" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    <input {...register("image")} type="text" name="image" id="img" placeholder="Image Url" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                 </div>
 
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                    <input {...register("password", { required: true })} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    <input {...register("password", { required: true, })} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     {errors.password && <span>This field is required</span>}
                 </div>
 

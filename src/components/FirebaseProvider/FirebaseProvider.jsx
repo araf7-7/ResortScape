@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword,GoogleAuthProvider, signInWithPopup, GithubAuthProvider, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 
@@ -8,7 +8,8 @@ const gitHubProvider = new GithubAuthProvider()
 const FirebaseProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
-    console.log(loading)
+    const [refetch, setRefetch] = useState(false)
+    // console.log(loading)
 
 
     const createUser = (email, password) => {
@@ -16,34 +17,42 @@ const FirebaseProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password)
 
     }
+
+    const updateUserProfile = (FullName,image) => {
+        return updateProfile(auth.currentUser, {
+            displayName: FullName,
+            photoURL: image
+        })
+    }
+
     const signInUser = (email, password) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const googleLogin =()=>{
+    const googleLogin = () => {
         setLoading(true)
-        return signInWithPopup(auth, googleProvider )
+        return signInWithPopup(auth, googleProvider)
     }
-    const gitHubLogin =()=>{
+    const gitHubLogin = () => {
         setLoading(true)
-        return signInWithPopup(auth, gitHubProvider )
+        return signInWithPopup(auth, gitHubProvider)
     }
-    const logout =( ) => {
+    const logout = () => {
         setUser(null)
         signOut(auth)
     }
-
+    // console.log(user)
     useEffect(() => {
-      const unsuscribe =  onAuthStateChanged(auth, (user) => {
+        const unsuscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
-                setLoading(false)
             }
+            setLoading(false)
 
         });
-        return ()=> unsuscribe()
-    }, [])
+        return () => unsuscribe()
+    }, [refetch])
 
     const allValues = {
         createUser,
@@ -52,7 +61,10 @@ const FirebaseProvider = ({ children }) => {
         gitHubLogin,
         logout,
         user,
-        loading
+        loading,
+        refetch,
+        setRefetch,
+        updateUserProfile
     }
     return (
 

@@ -1,12 +1,19 @@
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import UseAuth from '../hooks/UseAuth';
+import { useEffect } from 'react';
 
 const Login = () => {
-    const { signInUser } = UseAuth
+    const { signInUser, user } = UseAuth()
     const {
         register, handleSubmit, formState: { errors },
     } = useForm()
+    
+    const navigate = useNavigate()
+    useEffect(() => {
+        if(user) navigate("/")
+    }, [navigate, user]
+    )
     
     const onSubmit = data => {
         
@@ -19,7 +26,6 @@ const Login = () => {
         })
     }
     const { googleLogin, gitHubLogin } = UseAuth()
-    const navigate = useNavigate()
     const location = useLocation()
     const from = location?.state || "/"
     const handleSocialLogin = socialProvider => {
@@ -41,7 +47,7 @@ const Login = () => {
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                    <input {...register("password", { required: true })} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    <input {...register("password", { required: true , })} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     {errors.password && <span>This field is required</span>}
 
                 </div>
