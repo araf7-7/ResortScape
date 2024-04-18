@@ -11,7 +11,7 @@ const Profile = () => {
                  <Helmet>
             <title>Profile</title>
             </Helmet>
-                <div className="flex-shrink-0  items-center mx-auto w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
+                <div className="flex-shrink-0  items-center mx-auto md:w-auto w-[150px] lg:w-[130px]  mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
                     {user.photoURL ? (
                         <img className="rounded-full " src={user?.photoURL} alt={user?.displayName} />
                     ) : (
