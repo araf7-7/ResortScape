@@ -6,7 +6,7 @@ const ResortCards = () => {
     const [resorts, setResorts] = useState([]);
 
     useEffect(() => {
-        fetch("resort.json")
+        fetch("./resort.json")
             .then(res => res.json())
             .then(data => setResorts(data));
     }, [])

@@ -81,12 +81,12 @@ const Register = () => {
                 <div className="space-y-1 text-sm">
                     <label htmlFor="FullName" className="block dark:text-gray-600">Full Name</label>
                     <input {...register("FullName", { required: true })} type="text" name="FullName" id="FullName" placeholder="Full Name" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                    {errors.FullName && <span>This field is required</span>}
+                    {errors.FullName && <span className='text-red-600'>This field is required</span>}
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="email" className="block dark:text-gray-600">Email</label>
                     <input {...register("email", { required: true })} type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                    {errors.email && <span>This field is required</span>}
+                    {errors.email && <span className='text-red-600'>This field is required</span>}
                 </div>
 
                 <div className="space-y-1 text-sm">
@@ -97,7 +97,7 @@ const Register = () => {
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block dark:text-gray-600">Password</label>
                     <input {...register("password", { required: true, })} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                    {errors.password && <span>This field is required</span>}
+                    {errors.password && <span className='text-red-600'>This field is required</span>}
                 </div>
 
                 <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Sign Up</button>

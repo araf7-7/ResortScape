@@ -27,7 +27,7 @@ const Header = () => {
                     </div>
                     <div className="flex item-center">
                         <img src="/public/resort.png" alt="" className="w-14" />
-                        <a className="btn btn-ghost text-2xl font-bold">ResortScape</a>
+                      <NavLink to="/" > <a className="btn btn-ghost text-2xl font-bold">ResortScape</a></NavLink>  
                     </div>
                 </div>
                 
